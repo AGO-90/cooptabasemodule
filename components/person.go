@@ -11,6 +11,7 @@ var (
 )
 
 type Person struct {
+	CI               string           `gorm:"primaryKey" json:"ci"`
 	FirstName        string           `json:"first_name"`
 	LastName         string           `json:"last_name"`
 	BirthDate        time.Time        `json:"birth_date"`
@@ -18,7 +19,7 @@ type Person struct {
 	DocumentNumber   string           `json:"document_number"`
 	PreferredName    string           `json:"preferred_name"`
 	EmploymentStatus EmploymentStatus `json:"employment_status"`
-	Phones           []string         `json:"phones"`
+	Phone            string           `json:"phone"`
 	Email            string           `json:"email"`
 	Address          string           `json:"address"`
 }
