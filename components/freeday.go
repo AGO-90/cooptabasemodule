@@ -8,3 +8,7 @@ type FreeDay struct {
 	Reason   string    `json:"reason"`
 	Approver Person    `json:"approver"`
 }
+
+func (FreeDay) TableName() string {
+	return "free_days"
+}
