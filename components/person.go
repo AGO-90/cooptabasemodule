@@ -8,6 +8,7 @@ var (
 	Retired          EmploymentStatus = "retired"
 	PartiallyRetired EmploymentStatus = "partially_retired"
 	Employed         EmploymentStatus = "employed"
+	Undefined        EmploymentStatus = "undefined"
 )
 
 type Person struct {
@@ -22,6 +23,10 @@ type Person struct {
 	Phone            string           `json:"phone"`
 	Email            string           `json:"email"`
 	Address          string           `json:"address"`
+}
+
+func (Person) TableName() string {
+	return "people"
 }
 
 func (p *Person) GetAge(now time.Time) int {
