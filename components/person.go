@@ -1,6 +1,9 @@
 package components
 
-import "time"
+import (
+	"gorm.io/gorm"
+	"time"
+)
 
 type EmploymentStatus string
 
@@ -12,6 +15,7 @@ var (
 )
 
 type Person struct {
+	gorm.Model
 	FirstName        string           `json:"first_name"`
 	LastName         string           `json:"last_name"`
 	BirthDate        time.Time        `json:"birth_date"`
