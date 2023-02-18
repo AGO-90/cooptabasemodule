@@ -22,7 +22,7 @@ type Person struct {
 	Phone            string           `json:"phone"`
 	Email            string           `json:"email"`
 	Address          string           `json:"address"`
-	Company          Company          `json:"company"`
+	CompanyID        int              `json:"company_id"`
 }
 
 func (Person) TableName() string {

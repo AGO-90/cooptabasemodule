@@ -3,7 +3,7 @@ package components
 import "time"
 
 type Company struct {
-	ID               uint      `json:"id"`
+	ID               int       `json:"id"`
 	Name             string    `json:"name"`
 	RUT              string    `json:"rut"`
 	RegistrationDate time.Time `json:"registration_date"`
