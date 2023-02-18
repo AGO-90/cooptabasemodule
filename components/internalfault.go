@@ -3,7 +3,7 @@ package components
 import "time"
 
 type InternalFault struct {
-	ID           int       `json:"id"`
+	ID           int       `gorm:"primaryKey" json:"id"`
 	Date         time.Time `json:"date"`
 	Observations string    `json:"observations"`
 	Driver       Driver    `json:"driver"`
